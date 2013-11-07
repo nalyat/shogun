@@ -738,6 +738,10 @@ SET(CMAKE_SWIG_FLAGS "${CMAKE_SWIG_FLAGS};-w473;-w454;-w312;-w325;-fvirtual")
 
 OPTION(USE_SWIG_DIRECTORS "" OFF)
 
+IF(USE_SWIG_DIRECTORS)
+    LIST(APPEND DEFINES USE_SWIG_DIRECTORS)
+ENDIF()
+
 # python modular
 IF (PythonModular OR PythonStatic)
 	# find python library for the found python interpreter
